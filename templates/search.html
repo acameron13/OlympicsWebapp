@@ -1,0 +1,50 @@
+<!-- Alison Cameron and Adam Nik -->
+
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Olympics</title>
+	  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" type="text/css" />
+	  <script type="text/javascript" src="{{ url_for('static', filename='search.js') }}" ></script>
+	  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+	</head>
+
+	<body>
+		<div id="top">
+    		<div class="logo">
+     			<img src="{{ url_for('static', filename='olympic_rings.png') }}" height="75" alt="logo">
+    		</div>
+    		<div class="topnav">
+      			<a href="index.html">Map</a>
+      			<a class="active" href="search.html">Search</a>
+    		</div>
+ 		</div>
+
+		<input type="text" list="games_dropdown" placeholder="Games" class="search_dropbtn" id="games_btn"></input>
+		<datalist id="games_dropdown"></datalist>
+
+		<input type="text" list="teams_dropdown" placeholder="Team" class="search_dropbtn" id="teams_btn"></input>
+		<datalist id="teams_dropdown"></datalist>
+
+		<input type="text" list="sports_dropdown" placeholder="Sport" class="search_dropbtn" id="sports_btn"></input>
+		<datalist id="sports_dropdown"></datalist>
+
+		<input type="text" list="events_dropdown" placeholder="Event" class="search_dropbtn" id="events_btn"></input>
+		<datalist id="events_dropdown"></datalist>
+
+		<input type="text" list="athletes_dropdown" placeholder="Athlete" class="search_dropbtn" id="athletes_btn"></input>
+		<datalist id="athletes_dropdown"></datalist>
+
+		<button id="search_submit">Submit</button>
+
+		<table id="results"></table>
+
+		<div class="pagination">
+  			<button id="back">❮</button>
+  			<button id="forward">❯</button>
+		</div>
+
+
+	</body>
+
+</html>
